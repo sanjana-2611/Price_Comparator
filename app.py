@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import requests
 import urllib.parse
 app = Flask(__name__)
-API_KEY = "1dab305bc17422ae963f69083507e2c588c22011e940c96ab2fde49052a34df1"
+API_KEY = "YOUR_SERPAPI_KEY_HERE"
 
 def get_prices(query):
     """Fetch real-time Indian product data using SerpAPI (Google Shopping)."""
