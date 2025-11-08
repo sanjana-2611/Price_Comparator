@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h4 class="text-center mb-4">Results for "{{ product }}"</h4>
+<div class="row">
+  {% for item in results %}
+  <div class="col-md-4 mb-3">
+    <div class="card h-100">
+      <img src="{{ item.image }}" class="card-img-top" alt="product image">
+      <div class="card-body">
+        <h6>{{ item.title }}</h6>
+        <p><strong>{{ item.price }}</strong> <small class="text-muted">({{ item.source }})</small></p>
+        <a href="{{ item.link }}" target="_blank" class="btn btn-sm btn-outline-dark">View Deal</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<a href="/" class="btn btn-secondary mt-3">🔁 New Search</a>
+{% endblock %}
